@@ -43,7 +43,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 sh """
-                    docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW
+                    docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin $DOCKERHUB_CREDENTIALS_PSW
                     docker push padmapriya26/python_image:latest
                     docker push padmapriya26/java_image:latest
                     docker push padmapriya26/nginx_image:latest
