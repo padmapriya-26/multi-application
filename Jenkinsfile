@@ -45,7 +45,7 @@ pipeline {
                 sh """
                     docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW
                     docker push padmapriya26/python_image:latest
-                    docker push padmapriuya26/java_image:latest
+                    docker push padmapriya26/java_image:latest
                     docker push padmapriya26/nginx_image:latest
                 """
             }
